@@ -1,7 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    scroll-margin-top: 20px;
+    /* Ajusta el margen superior al hacer scroll */
 }
 
 /* General */
@@ -64,7 +69,7 @@ body {
 }
 
 /* Contenido principal */
-.main-content{
+.main-content {
     flex: 1;
     padding: 20px;
     display: flex;
@@ -103,7 +108,7 @@ section h2 {
     color: #333;
 }
 
-.Noticias h1{
+.Noticias h1 {
     padding: 15px 20px;
     margin-bottom: 1px;
     border-radius: 5px;
@@ -117,21 +122,21 @@ section h2 {
     font-size: 18px;
 }
 
-.Noticias h2{
+.Noticias h2 {
     padding: 15px 20px;
     margin-bottom: 1px;
     border-radius: 5px;
     font-size: 24px
 }
 
-.Noticias ol{
+.Noticias ol {
     padding: 15px 20px;
     margin-bottom: 1px;
     border-radius: 5px;
     font-size: 18px;
 }
 
-.Noticias ul{
+.Noticias ul {
     padding: 15px 20px;
     list-style-type: disc;
     margin-bottom: 1px;
@@ -139,11 +144,83 @@ section h2 {
     font-size: 18px;
 }
 
-.Noticias hr{
+.Noticias hr {
     border-width: 2px;
 }
 
-.separacion br{
+.separacion br {
     border-width: 2px;
 
+}
+
+/* Estilo base (modo claro) */
+body {
+    background-color: #f8f9fa;
+    /* Fondo claro */
+    color: #333;
+    /* Texto oscuro */
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #121212;
+    /* Fondo oscuro */
+    color: #f1f1f1;
+    /* Texto claro */
+}
+
+.dark-mode .sidebar {
+    background-color: #1e1e1e;
+    /* Fondo del menú en modo oscuro */
+    color: #ccc;
+    /* Texto del menú en modo oscuro */
+}
+
+.dark-mode .sidebar ul li a {
+    color: #999;
+}
+
+.dark-mode .sidebar ul li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .header {
+    background-color: #333;
+    color: #ddd;
+}
+
+.dark-mode-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    background-color: #0056b3;
+}
+
+body.dark-mode section {
+    background-color: #1e1e1e;
+    /* Fondo oscuro para el recuadro */
+    color: #f1f1f1;
+    /* Texto claro */
+    border-color: #333;
+    /* Opcional: cambiar bordes si hay */
+}
+
+body.dark-mode section h2 {
+    color: #f1f1f1;
+    /* Cambiar el color del título */
+}
+
+body.dark-mode section p {
+    color: #ccc;
+    /* Cambiar el color del texto */
 }

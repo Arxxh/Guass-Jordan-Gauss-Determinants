@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
+
 <body>
     <div class="dashboard">
         <aside class="sidebar">
@@ -25,6 +27,7 @@
             <header class="header">
                 <h1>Dashboard de Métodos Numéricos</h1>
                 <p>Bienvenido al sistema Step-By-Step.</p>
+                <button id="darkModeToggle" class="dark-mode-btn">🌙 Modo Noche</button>
             </header>
             <section id="overview">
                 <h2>Vista General</h2>
@@ -37,74 +40,77 @@
             </div>
             <div class="Noticias">
                 <h1>Gauss</h1>
-                <p>El método de Gauss, también conocido como eliminación de Gauss, 
-                    es un procedimiento matemático utilizado para resolver sistemas de ecuaciones lineales. 
-                    Consiste en transformar el sistema original en uno equivalente más sencillo mediante operaciones 
-                    elementales con las filas de la matriz asociada al sistema. 
+                <p>El método de Gauss, también conocido como eliminación de Gauss,
+                    es un procedimiento matemático utilizado para resolver sistemas de ecuaciones lineales.
+                    Consiste en transformar el sistema original en uno equivalente más sencillo mediante operaciones
+                    elementales con las filas de la matriz asociada al sistema.
                     Estas operaciones permiten reducir la matriz a su forma escalonada o forma escalonada reducida.
                 </p>
                 <h2>Pasos principales de metodo:</h2>
                 <ol>
-                    <li>Formar la matriz aumentada: 
+                    <li>Formar la matriz aumentada:
                         Combina la matriz de coeficientes del sistema con el vector de términos independientes.</li>
-                        <br>
-                    <li>Transformación a forma escalonada: Se utiliza el pivoteo, es decir, elegir un elemento principal (o pivote) 
-                        en cada columna y hacer que los elementos debajo de este en su columna se conviertan en ceros mediante operaciones 
+                    <br>
+                    <li>Transformación a forma escalonada: Se utiliza el pivoteo, es decir, elegir un elemento principal
+                        (o pivote)
+                        en cada columna y hacer que los elementos debajo de este en su columna se conviertan en ceros
+                        mediante operaciones
                         elementales entre filas (como restas o multiplicaciones por un escalar).</li>
-                        <br>
-                    <li>Sustitución regresiva (opcional, si no se lleva a forma reducida): 
-                        Una vez que la matriz está en forma escalonada, se resuelve el sistema 
-                        comenzando por la última ecuación 
+                    <br>
+                    <li>Sustitución regresiva (opcional, si no se lleva a forma reducida):
+                        Una vez que la matriz está en forma escalonada, se resuelve el sistema
+                        comenzando por la última ecuación
                         (de una sola incógnita) y retrocediendo hacia las primeras.</li>
                 </ol>
                 <h2>Diferencia</h2>
-                <p>La diferencia principal entre Gauss y Gauss-Jordan es que en Gauss solo 
-                    se hacen ceros debajo de los pivotes para obtener una forma escalonada y 
-                    luego se realiza sustitución regresiva, mientras que en Gauss-Jordan también 
-                    se hacen ceros arriba de los pivotes, llevando 
+                <p>La diferencia principal entre Gauss y Gauss-Jordan es que en Gauss solo
+                    se hacen ceros debajo de los pivotes para obtener una forma escalonada y
+                    luego se realiza sustitución regresiva, mientras que en Gauss-Jordan también
+                    se hacen ceros arriba de los pivotes, llevando
                     la matriz a una forma escalonada reducida que da las soluciones directamente.</p>
                 <br>
                 <hr>
                 <h1>Gauss-Jordan</h1>
                 <p>El método de Gauss-Jordan es una extensión del método de Gauss que lleva la
-                     matriz de un sistema de ecuaciones lineales a su forma escalonada reducida,
-                     facilitando directamente la solución del sistema. A diferencia de Gauss, que 
-                     generalmente requiere sustitución regresiva para encontrar 
+                    matriz de un sistema de ecuaciones lineales a su forma escalonada reducida,
+                    facilitando directamente la solución del sistema. A diferencia de Gauss, que
+                    generalmente requiere sustitución regresiva para encontrar
                     las soluciones, Gauss-Jordan elimina la necesidad de este paso adicional.
                 </p>
                 <h2>Pasos principales del metodo:</h2>
                 <ol>
-                     <li>
-                        Formar la matriz aumentada: Igual que en Gauss, se combina la matriz de 
-                            coeficientes del sistema con el vector de términos independientes.
-                     </li>
-                     <br>
-                     <li>Reducción a forma escalonada reducida:
+                    <li>
+                        Formar la matriz aumentada: Igual que en Gauss, se combina la matriz de
+                        coeficientes del sistema con el vector de términos independientes.
+                    </li>
+                    <br>
+                    <li>Reducción a forma escalonada reducida:
                         <ul>
-                          <li>Se selecciona un pivote en cada fila (un elemento no nulo que 
-                            idealmente sea 1, si no, se escala la fila para que lo sea).</li>
-                          <li>Se utiliza este pivote para convertir en ceros todos los elementos tanto por 
-                            debajo como 
-                            por encima de él en su columna, mediante operaciones elementales entre filas.</li>
-                          <li>Este proceso se repite para cada fila hasta obtener una matriz donde cada pivote 
-                            sea el único valor distinto de cero en su columna.</li>
+                            <li>Se selecciona un pivote en cada fila (un elemento no nulo que
+                                idealmente sea 1, si no, se escala la fila para que lo sea).</li>
+                            <li>Se utiliza este pivote para convertir en ceros todos los elementos tanto por
+                                debajo como
+                                por encima de él en su columna, mediante operaciones elementales entre filas.</li>
+                            <li>Este proceso se repite para cada fila hasta obtener una matriz donde cada pivote
+                                sea el único valor distinto de cero en su columna.</li>
                         </ul>
-                      </li>
-                      <li>
-                        Solución directa: Una vez en forma escalonada reducida, 
-                        la matriz directamente muestra las soluciones del sistema, 
+                    </li>
+                    <li>
+                        Solución directa: Una vez en forma escalonada reducida,
+                        la matriz directamente muestra las soluciones del sistema,
                         ya que cada fila representa una ecuación donde una variable tiene un único valor.
-                      </li>
-                    </ol>
-                    <hr>
-                    <h1>Método de Cramer</h1>
-                    <p>
-                        es una técnica para resolver sistemas de ecuaciones lineales utilizando determinantes
-                        de matrices asociadas para encontrar los valores de las incógnitas.
-                    </p>
+                    </li>
+                </ol>
+                <hr>
+                <h1>Método de Cramer</h1>
+                <p>
+                    es una técnica para resolver sistemas de ecuaciones lineales utilizando determinantes
+                    de matrices asociadas para encontrar los valores de las incógnitas.
+                </p>
             </div>
         </main>
     </div>
-    <script src="/Step-By-Step/front-end/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
